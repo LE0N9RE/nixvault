@@ -13,7 +13,6 @@
       "/var/lib/nixos"
       "/var/lib/bluetooth"
       "/var/lib/NetworkManager"
-      "/tmp"
     ];
 
     # = user folders will not be delated

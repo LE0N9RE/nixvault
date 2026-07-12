@@ -15,8 +15,6 @@
 
   nix.gc.automatic = true;
   nix.gc.dates = "daily";
-  #nix.gc.options = "--delete-older-than 5d";
-  nix.gc.options = "--delete-older-than +5";
   nix.settings.auto-optimise-store = true;
 
 

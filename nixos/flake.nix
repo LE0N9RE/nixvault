@@ -28,16 +28,8 @@
           inputs.disko.nixosModules.disko
           inputs.preservation.nixosModules.preservation
 
+
           ./configuration.nix
-          ./hardware-configuration.nix
-
-          ./modules/hardware.nix
-          ./modules/system.nix
-          ./modules/user.nix
-          ./modules/utils.nix
-          ./modules/packages.nix
-          ./modules/mangowm.nix
-
           ./disko.nix
           ./preservation.nix
         ];

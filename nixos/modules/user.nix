@@ -5,7 +5,7 @@
   users.users."a3n" = {
     isNormalUser = true;
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
+    hashedPasswordFile = "/persistent/passwords/a3n";
   };
 
     environment.shellAliases = {
