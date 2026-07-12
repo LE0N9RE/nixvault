@@ -1,0 +1,5 @@
+.config/mozilla/
+.config/zen/
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm

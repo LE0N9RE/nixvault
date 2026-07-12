@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+FLAKE="$HOME/dotfiles/nixos#a3n"
+SYSTEM_PROFILE="/nix/var/nix/profiles/system"
+
+if sudo nixos-rebuild switch --flake "$FLAKE"; then
+  echo "Rebuild succeeded. Keeping the newest 5 generations..."
+
+  sudo nix-env \
+    --profile "$SYSTEM_PROFILE" \
+    --delete-generations +5
+
+  sudo nix-collect-garbage
+
+  echo "Cleanup complete."
+else
+  echo "Rebuild failed. Cleanup skipped." >&2
+  exit 1
+fi

@@ -1,0 +1,17 @@
+configuration {
+    modi: "drun,run";
+    font: "monospace 12"; /* Bumps up text size inside Rofi */
+    show-icons: true;
+    icon-theme: "Papirus";
+}
+@theme "gruvbox-dark"
+window {
+    width: 35%;       /* Makes the Rofi window take up exactly 35% of your screen width */
+    location: center;
+    anchor:   center;
+}
+listview {
+    columns: 1;       /* Set this to 2 or 3 if you want side-by-side app columns */
+    lines:   8;       /* Exactly how many apps show vertically before you have to scroll */
+    fixed-height: true;
+}

@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+# 1. Teleport straight to your dotfiles directory
+cd ~/dotfiles || exit
+
+# 2. Stage all your clean config changes
+git add .
+
+# 3. Ask you what you want the commit message to be
+echo " Vault sync initiated."
+read -p "Enter your commit message: " msg
+
+# 4. If you didn't type anything, use a default message
+if [ -z "$msg" ]; then
+    msg="automated vault sync"
+fi
+
+# 5. Commit and push it out!
+git commit -m "$msg"
+git push origin main
+echo " Vault updated successfully!"
