@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, ... }: # <-- Added 'inputs' here
+{ config, pkgs, inputs, ... }: # <--
 
 {
   nixpkgs.config.allowUnfree = true;
@@ -15,6 +15,8 @@
     gvfs
     xdg-user-dirs
     whitesur-icon-theme
+    dconf
+    gsettings-desktop-schemas
     inputs.zen-browser.packages.${pkgs.system}.default
   ];
 }

@@ -22,7 +22,7 @@
         "Programs"
         "Documents"
         "Pictures"
-        "Videos/Saved"
+        "Saved"
       ];
 
       files = [
