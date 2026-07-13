@@ -17,6 +17,7 @@
     whitesur-icon-theme
     dconf
     gsettings-desktop-schemas
+    discord
     inputs.zen-browser.packages.${pkgs.system}.default
   ];
 }
