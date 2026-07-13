@@ -27,8 +27,6 @@
 
       files = [
         ".bash_history"
-        ".gitconfig"
-        ".git-credentials"
       ];
     };
   };
