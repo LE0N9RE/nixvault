@@ -9,23 +9,26 @@
     ];
 
     directories = [
-      "/var/lib/nixos"
-      "/var/lib/bluetooth"
-      "/var/lib/NetworkManager"
+  "/var/lib/nixos"
+  "/var/lib/bluetooth"
+  "/var/lib/NetworkManager"
+  "/etc/NetworkManager/system-connections"
+];
+
+users.a3n = {
+  directories = [
+    "dotfiles"
+    ".config"
+    ".local/share/zed"
+    ".ssh"
+    "Projects"
+    "Programs"
+    "Documents"
+    "Pictures"
+    "Saved"
     ];
 
-    users.a3n = {
-      directories = [
-        "dotfiles"
-        ".config"
-        "Projects"
-        "Programs"
-        "Documents"
-        "Pictures"
-        "Saved"
-      ];
-
-      files = [
+        files = [
         ".bash_history"
       ];
     };
