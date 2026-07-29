@@ -10,6 +10,9 @@
     disko.url = "github:nix-community/disko";
     disko.inputs.nixpkgs.follows = "nixpkgs";
 
+    aagl.url = "github:ezKEa/aagl-gtk-on-nix";
+    aagl.inputs.nixpkgs.follows = "nixpkgs";
+
     preservation.url = "github:nix-community/preservation";
   };
 
@@ -27,6 +30,7 @@
           inputs.mangowm.nixosModules.mango
           inputs.disko.nixosModules.disko
           inputs.preservation.nixosModules.preservation
+          inputs.aagl.nixosModules.default
 
 
           ./configuration.nix

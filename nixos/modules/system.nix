@@ -33,4 +33,11 @@
 
   #for color shame to perfer dark
   programs.dconf.enable = true;
+
+#Configures the official ezkea Cachix binary cache so you don't compile Wine/launcher from source
+nix.settings = {
+  substituters = [ "https://ezkea.cachix.org" ];
+  trusted-public-keys = [ "ezkea.cachix.org-1:ioBmUbJTZIKsHmWWXPe1FSFbeVe+afhfgqgTSNd34eI=" ];
+};
+
 }
