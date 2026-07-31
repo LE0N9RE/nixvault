@@ -15,10 +15,13 @@
     pulse.enable = true;
   };
 
-  # Libinput (Touchpad)
-   services.libinput = {
+  #touchpad
+  services.libinput = {
     enable = true;
-    touchpad.sendEventsMode = "enabled";
-    accelSpeed = "0.3";
+
+    touchpad = {
+      sendEventsMode = "enabled";
+      accelSpeed = "0.3";
     };
+  };
 }
