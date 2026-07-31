@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ ... }:
 {
   # AMD Graphics
   boot.initrd.kernelModules = [ "amdgpu" ];
@@ -16,8 +16,9 @@
   };
 
   # Libinput (Touchpad)
-  services.libinput = {
+   services.libinput = {
     enable = true;
-    touchpad.sendEventsMode = "disabled";
-  };
+    touchpad.sendEventsMode = "enabled";
+    accelSpeed = "0.3";
+    };
 }

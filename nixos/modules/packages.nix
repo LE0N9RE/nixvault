@@ -1,26 +1,46 @@
-{ config, pkgs, inputs, ... }: # <--
+{ pkgs, inputs, ... }:
 
 {
-  nixpkgs.config.allowUnfree = true;
-  programs.localsend.enable = true;
-  programs.anime-game-launcher.enable = true;
-  services.flatpak.enable = true;
+  # Flatpak
+  services.flatpak = {
+    remotes = [
+      {
+        name = "flathub";
+        location = "https://dl.flathub.org/repo/flathub.flatpakrepo";
+      }
+    ];
+
+    packages = [
+      "org.vinegarhq.Sober"
+    ];
+  };
+
+  # System packages
   environment.systemPackages = with pkgs; [
+    # Terminal and system tools
     kitty
-    nautilus
-    zed-editor
-    firefox
     git
-    awww
+    fastfetch
+
+    # Desktop utilities
+    nautilus
     rofi
+    awww
+    cava
+
+    # Applications
+    inputs.zen-browser.packages.${pkgs.system}.default
+    firefox
+    zed-editor
+    discord
+    spotify
+
+    # Desktop integration
     glib
     gvfs
     xdg-user-dirs
-    whitesur-icon-theme
     dconf
     gsettings-desktop-schemas
-    discord
-    fastfetch
-    inputs.zen-browser.packages.${pkgs.system}.default
+    whitesur-icon-theme
   ];
 }

@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  # Set your time zone.
+  # Set time zone.
   time.timeZone = "America/New_York";
 
   # Select internationalisation properties.
@@ -23,7 +23,7 @@
  # Configure keymap in X11
  services.xserver.xkb = {
    layout = "us";
-   variant = "";
+   console.keyMap = "us";
  };
  # Faster rebuilding
   documentation = {
