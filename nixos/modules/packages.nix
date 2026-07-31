@@ -27,6 +27,9 @@
     rofi
     awww
     cava
+    waylyrics
+    sptlrx
+    peaclock
 
     # Applications
     inputs.zen-browser.packages.${pkgs.system}.default
@@ -34,6 +37,7 @@
     zed-editor
     discord
     spotify
+    mpvpaper
 
     # Desktop integration
     glib

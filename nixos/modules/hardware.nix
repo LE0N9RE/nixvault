@@ -14,14 +14,4 @@
     alsa.enable = true;
     pulse.enable = true;
   };
-
-  #touchpad
-  services.libinput = {
-    enable = true;
-
-    touchpad = {
-      sendEventsMode = "enabled";
-      accelSpeed = "0.3";
-    };
-  };
 }
