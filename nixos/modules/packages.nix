@@ -17,6 +17,11 @@
 
   # System packages
   environment.systemPackages = with pkgs; [
+    #program lang
+    cargo
+    rustc
+    rust-analyzer
+
     # Terminal and system tools
     kitty
     git
@@ -30,6 +35,10 @@
     waylyrics
     sptlrx
     peaclock
+    steam-run
+    jdk21
+    xwayland-satellite
+    xcursorgen
 
     # Applications
     inputs.zen-browser.packages.${pkgs.system}.default
@@ -38,7 +47,8 @@
     discord
     spotify
     mpvpaper
-
+    steam
+    bitwarden-desktop
     # Desktop integration
     glib
     gvfs
@@ -46,5 +56,12 @@
     dconf
     gsettings-desktop-schemas
     whitesur-icon-theme
+    xorg.libXtst
+    xorg.libX11
+    xorg.libXext
+
+    #video/screen
+    obs-studio
+    hyprshot
   ];
 }

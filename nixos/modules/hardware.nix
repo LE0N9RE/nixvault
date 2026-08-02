@@ -14,4 +14,9 @@
     alsa.enable = true;
     pulse.enable = true;
   };
+  #idk
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+  };
 }

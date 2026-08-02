@@ -20,6 +20,8 @@ users.a3n = {
     "dotfiles"
     ".config"
     ".local/share/zed"
+    ".local/share/applications"
+    ".minecraft"
     ".ssh"
     "Projects"
     "Programs"

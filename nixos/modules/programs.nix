@@ -23,4 +23,10 @@
     enable = true;
     update.onActivation = true;
   };
+  #idk
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true;
+    dedicatedServer.openFirewall = true;
+  };
 }
